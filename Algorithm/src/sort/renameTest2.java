@@ -1,5 +1,5 @@
 package sort;
 
-public class renameTest {
-
+public class renameTest2 {
+eieeiieiei
 }
