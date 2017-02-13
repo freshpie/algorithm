@@ -15,7 +15,7 @@ public class SelectionSort {
 		
 		System.out.println("=======================================");
 		
-		int[] arr2 = new int[]{1,2,4,1,3,1};
+		int[] arr2 = new int[]{9,2,4,1,1,3,1};
 		System.out.println(Arrays.toString(arr2));
 		
 		for(int i=0; i<arr2.length; i++){
