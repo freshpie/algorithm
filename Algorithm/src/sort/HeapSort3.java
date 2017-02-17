@@ -6,11 +6,7 @@ public class HeapSort3 {
 
 	public static void main(String[] args) {
 		Heap3 heap = new Heap3();
-		/*
-			  10
-		  7		  8
-		5	3	1	
-		 */
+
 		int[] arr = new int[]{10,7,8,5,3,1};
 		int[] arr2 = new int[]{1,3,5,8,7,10};
 		
@@ -24,7 +20,6 @@ public class HeapSort3 {
 		System.out.println("-------------------------------");
 		System.out.println(Arrays.toString(heap.heapSort(arr5)));
 	}
-
 }
 class Heap3{
 	public int heapDepth(int[] arr) {
@@ -32,11 +27,10 @@ class Heap3{
 	}
 	public int[] heapSort(int[] arr){
 		int temp =0;
-		//int startIndex = 0;
 		int listLength = arr.length;
 		for(int i=listLength -1; i > 0; i--){
 			System.out.println("input : " + Arrays.toString(arr));
-			arr = maxHeapify(arr, listLength);
+			arr = bulidHeap(arr, listLength);
 			System.out.println("max heap : " + Arrays.toString(arr));
 			temp = arr[0];
 			arr[0] = arr[listLength-1];
@@ -48,13 +42,13 @@ class Heap3{
 		
 		return arr;
 	}
-	public int[] maxHeapify(int[] arr, int listLength){
+	public int[] bulidHeap(int[] arr, int listLength){
 		for(int i=listLength/2 -1; i >= 0; i--){
-			buildHeap(arr, i, listLength);
+			maxHeap(arr, i, listLength);
 		}
 		return arr;
 	}
-	public int[] buildHeap(int[] arr, int i, int listLength){
+	public int[] maxHeap(int[] arr, int i, int listLength){
 		int nextIndex = i;
 		while(!noChild(arr, nextIndex, listLength)){
 			//마지막 부모 노드 부터 위로 올라가면서 확인
