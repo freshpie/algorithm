@@ -2,7 +2,7 @@ package sort;
 
 import java.util.Arrays;
 
-public class QuickSort {
+public class MergeSort_ {
 
 	public static void main(String[] args) {
 		int[] arr1 = new int[]{10,7,8,5,3,1};
@@ -18,7 +18,7 @@ public class QuickSort {
 
 }
 
-class Quick{
+class Merge{
 	
 	
 }
