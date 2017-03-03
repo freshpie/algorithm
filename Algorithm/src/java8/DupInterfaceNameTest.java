@@ -6,6 +6,9 @@ public class DupInterfaceNameTest {
 		InterfaceImpl impl = new InterfaceImpl();
 		
 		impl.interfaceMethod();
+		
+		DupInterfaceImpl dupImpl = new DupInterfaceImpl();
+		dupImpl.customMethod();
 	}		
 }
 
@@ -30,6 +33,10 @@ class DupInterfaceImpl implements Interface3, Interface4{
 
 	@Override
 	public void interfaceMethod2() {}
+	
+	public void customMethod(){
+		System.out.println("asdf");
+	}
 }
 
 class DupInterfaceImpl2 implements Interface1, Interface2{
