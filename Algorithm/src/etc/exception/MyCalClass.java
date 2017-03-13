@@ -1,9 +1,9 @@
-package etc;
+package etc.exception;
 
 public class MyCalClass {
 	public static int add(int a, int b) throws MyException{
 		if(a<0 || b<0){
-			throw new MyException("À½¼öÀÓ;");
+			throw new MyException("ìŒìˆ˜ìž„;");
 		}
 		
 		return (a+b);
